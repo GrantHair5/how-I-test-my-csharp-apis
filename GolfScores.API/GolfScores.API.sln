@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScores.API", "GolfScores.API\GolfScores.API.csproj", "{D257EA75-3604-4BFE-9C7A-4768957F55E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScores.DB", "GolfScores.DB\GolfScores.DB.csproj", "{247843BF-7FA5-4220-80A4-8FCA2DBDA3C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D257EA75-3604-4BFE-9C7A-4768957F55E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D257EA75-3604-4BFE-9C7A-4768957F55E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D257EA75-3604-4BFE-9C7A-4768957F55E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D257EA75-3604-4BFE-9C7A-4768957F55E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247843BF-7FA5-4220-80A4-8FCA2DBDA3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247843BF-7FA5-4220-80A4-8FCA2DBDA3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247843BF-7FA5-4220-80A4-8FCA2DBDA3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247843BF-7FA5-4220-80A4-8FCA2DBDA3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2B36A38-5B68-4AA6-ADED-A20DB186AA12}
+	EndGlobalSection
+EndGlobal
