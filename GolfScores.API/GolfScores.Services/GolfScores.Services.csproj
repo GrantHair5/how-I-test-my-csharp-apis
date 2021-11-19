@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GolfScores.DB\GolfScores.DB.csproj" />
+    <ProjectReference Include="..\GolfScores.Domain\GolfScores.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

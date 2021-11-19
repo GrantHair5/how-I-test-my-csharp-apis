@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using GolfScores.DB;
+using GolfScores.Services;
+using GolfScores.Services.Implementation;
 using Microsoft.EntityFrameworkCore;
 
 namespace GolfScores.API
@@ -23,6 +25,8 @@ namespace GolfScores.API
         {
             services.AddDbContext<GolfScoresDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(nameof(GolfScoresDbContext))));
+
+            services.AddTransient<ICourseDataIntegrationServices, CourseDataIntegrationServices>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

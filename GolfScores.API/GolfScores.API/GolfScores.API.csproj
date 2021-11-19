@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GolfScores.DB\GolfScores.DB.csproj" />
+    <ProjectReference Include="..\GolfScores.Services\GolfScores.Services.csproj" />
   </ItemGroup>
 
 </Project>
