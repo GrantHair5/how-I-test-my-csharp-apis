@@ -8,29 +8,26 @@ using GolfScores.DB;
 using GolfScores.Services;
 using GolfScores.Services.Implementation;
 using Microsoft.EntityFrameworkCore;
-using EnvironmentName = Microsoft.AspNetCore.Hosting.EnvironmentName;
 
 namespace GolfScores.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment currentEnvironment)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            CurrentEnvironment = currentEnvironment;
         }
 
         public IConfiguration Configuration { get; }
-        public IWebHostEnvironment CurrentEnvironment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            if (!CurrentEnvironment.IsEnvironment("Testing"))
-            {
-                services.AddDbContext<GolfScoresDbContext>(options =>
+            services.AddDbContext<GolfScoresDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString(nameof(GolfScoresDbContext))));
-            }
+
+            
+          
 
             services.AddTransient<ICourseDataIntegrationServices, CourseDataIntegrationServices>();
 
@@ -44,7 +41,7 @@ namespace GolfScores.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, GolfScoresDbContext golfScoresDbContext)
         {
-            if (!env.IsEnvironment("prd") && !CurrentEnvironment.IsEnvironment("Testing"))
+            if (!env.IsEnvironment("prd") && !env.IsEnvironment("Testing"))
             {
                 golfScoresDbContext.Database.Migrate();
             }
