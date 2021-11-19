@@ -30,7 +30,7 @@ namespace GolfScores.API.Controllers
         [Route("Course")]
         public ActionResult<CourseDto> GetCourse(Guid id)
         {
-            return _courseDataIntegrationServices.GetAllCourses().First();
+            return _courseDataIntegrationServices.GetCourseById(id);
         }
 
     }
