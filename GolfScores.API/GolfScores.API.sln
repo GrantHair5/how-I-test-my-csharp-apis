@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScores.Domain", "GolfSc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScores.Services", "GolfScores.Services\GolfScores.Services.csproj", "{8A94A90D-A7EF-4DBA-A2BF-1166BFE89B1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfScores.API.InMemory.Tests", "GolfScores.API.InMemory.Tests\GolfScores.API.InMemory.Tests.csproj", "{B897BA0D-B78A-4972-AF1B-2831C503D0CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8A94A90D-A7EF-4DBA-A2BF-1166BFE89B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A94A90D-A7EF-4DBA-A2BF-1166BFE89B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A94A90D-A7EF-4DBA-A2BF-1166BFE89B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B897BA0D-B78A-4972-AF1B-2831C503D0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B897BA0D-B78A-4972-AF1B-2831C503D0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B897BA0D-B78A-4972-AF1B-2831C503D0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B897BA0D-B78A-4972-AF1B-2831C503D0CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
