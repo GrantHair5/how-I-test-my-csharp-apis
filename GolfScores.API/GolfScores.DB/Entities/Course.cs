@@ -7,6 +7,7 @@ namespace GolfScores.DB.Entities
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public int Par { get; set; }
         public virtual List<Hole> Holes { get; set; }
     }
 }

@@ -7,5 +7,7 @@ namespace GolfScores.DB.Entities
         public Guid Id { get; set; }
         public string Name { get; set; }
         public double Handicap { get; set; }
+
+        public virtual Course HomeCourse { get; set; }
     }
 }
