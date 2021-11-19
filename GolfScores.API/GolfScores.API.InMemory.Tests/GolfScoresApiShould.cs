@@ -26,12 +26,9 @@ namespace GolfScores.API.InMemory.Tests
         public GolfScoresApiShould()
         {
             var server = new TestServer(new WebHostBuilder()
-                .ConfigureAppConfiguration((context, conf) =>
-                {
-                    conf.AddJsonFile(Directory.GetCurrentDirectory() + "../appsettings.json");
-                }).UseEnvironment("Testing")
+                .UseEnvironment("Testing")
                 .UseStartup<Startup>()
-                .ConfigureServices(services =>
+                .ConfigureTestServices(services =>
                 {
                     services.AddDbContext<GolfScoresDbContext>(options =>
                         options.UseInMemoryDatabase("GolfScoresApiShould.db"));
