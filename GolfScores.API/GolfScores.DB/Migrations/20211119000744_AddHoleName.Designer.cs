@@ -4,14 +4,16 @@ using GolfScores.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GolfScores.DB.Migrations
 {
     [DbContext(typeof(GolfScoresDbContext))]
-    partial class GolfScoresDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211119000744_AddHoleName")]
+    partial class AddHoleName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
