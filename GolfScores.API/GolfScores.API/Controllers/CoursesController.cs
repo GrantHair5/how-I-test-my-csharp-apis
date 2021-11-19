@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using GolfScores.Domain.Dto.Courses;
 using GolfScores.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 
 namespace GolfScores.API.Controllers
 {
@@ -22,5 +25,13 @@ namespace GolfScores.API.Controllers
         {
             return _courseDataIntegrationServices.GetAllCourses();
         }
+
+        [HttpGet]
+        [Route("Course")]
+        public ActionResult<CourseDto> GetCourse(Guid id)
+        {
+            return _courseDataIntegrationServices.GetAllCourses().First();
+        }
+
     }
 }
